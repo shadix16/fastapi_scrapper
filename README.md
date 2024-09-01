@@ -1,6 +1,6 @@
 # Scrapping website by using fast api
 
-This is a FastAPI application for scraping product information from https://dentalstall.com/shop/. This app is build by using python and fastapi framework. To run the application docker and docker compose are used.
+This is a FastAPI application for scraping product information from https://dentalstall.com/shop/.
 
 ## Prerequisites
 
