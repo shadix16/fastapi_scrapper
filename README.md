@@ -20,13 +20,17 @@ This is a FastAPI application for scraping product information from https://dent
 
     - Run `docker-compose up --build`
 
-3. To start scraping, go to http://localhost:8000/docs and use the /scrape endpoint. The endpoint requires the following parameters:
+3. To start scrapping use below curl:
+      - curl --location 'http://localhost:8000/scrape/' \
+--header 'Authorization: ea19219nnska9921' \
+--header 'Content-Type: application/json' \
+--data '{
+    "limit_pages": 4,
+    "proxy": ""
+}'
+      - Authorization: A static token already provided in the above curl.
+      - limit_pages: The number of pages to scrape.
+      - proxy: (Optional) A proxy string.
+      
+4. After scraping a directory with name data name will be created where you can see the images and other details.
 
-    - api_token: A static API token (in our case it is "your_static_token").
-    - page_limit: The number of pages to scrape.
-    - proxy: (Optional) A proxy string.
-
-
-4. After scraping, you can view the json file containing the data inside "fastapi_scrapper/data" directory. Similarly, all images scraped are inside "fastapi_scrapper/data/images".
-
-5. Use the command `docker-compose down -v` to stop and remove the containers.

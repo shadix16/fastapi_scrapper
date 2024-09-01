@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+  fastapi:
+    build: .
+    container_name: scrapper
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - API_TOKEN=your_static_token
+    volumes:
+      - ./data:/app/data
+  redis:
+    container_name: scrapper_redis
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
