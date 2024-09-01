@@ -12,7 +12,7 @@ This is a FastAPI application for scraping product information from https://dent
 1. Clone the repository :
 
    - Open Command shell.
-   - Run `https://github.com/shadix16/fastapi_scrapper.git`
+   - Run `git clone https://github.com/shadix16/fastapi_scrapper.git`
    - Go to project directory by following command
    - Run `cd fastapi_scrapper/`
 
